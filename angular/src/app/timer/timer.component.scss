@@ -1,0 +1,73 @@
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .inputDiv {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+        input {
+            width: 150px;
+            color: rgb(169, 169, 169);
+            padding: 10px 15px;
+            font-size: 1.3em;
+            border-radius: 5px;
+            border: 1px solid #c0c0c0;
+            border: 0;
+            background-color: rgb(63, 63, 63);
+        }
+
+        textarea:focus,
+        input:focus {
+            outline: 2px solid #5c5c5c;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.3em;
+            background-color: #e7e7e7;
+            border: 0;
+            border-radius: 5px;
+        }
+    }
+
+    .timerDiv {
+        display: flex;
+        flex-direction: row;
+            gap: 40px;
+
+            .timerNumberDiv {
+                display: flex;
+                flex-direction: row;
+                align-items: end;
+                color: white;
+
+                .number {
+                    font-size: 8em;
+                }
+
+                .minsec {
+                    font-size: 6em;
+                }
+            
+        }
+    }
+
+    .progressBarContainer {
+        margin-top: 30px;
+        width: 60vw;
+        height: 2px;
+        background-color: black;
+
+        .progressBar {
+            background-color: white;
+            height: 2px;
+            transition: width 0.1s linear;
+        }
+    }
+}

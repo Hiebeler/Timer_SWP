@@ -1,6 +1,18 @@
-<h1>Timer</h1>
-<div>
-    <input type="text" (change)="onChange($event)">
-    <button (click)="start()">Start</button>
+<div class="wrapper">
+    <div *ngIf="!started" class="inputDiv">
+        <input type="number" placeholder="seconds" (change)="onChange($event)">
+        <button (click)="start()">Start</button>
+    </div>
+    <div *ngIf="started" class="timerDiv">
+            <div class="timerNumberDiv">
+                <p class="number">{{minutes}}</p><p class="minsec">m</p>
+            </div>
+            <div class="timerNumberDiv">
+                <p class="number">{{seconds}}</p><p class="minsec">s</p>
+            </div>
+        
+    </div>
+    <div *ngIf="started" class="progressBarContainer">
+        <div class="progressBar" [style.width.%]="progressPercent"></div>
+    </div>
 </div>
-<p>{{time}}</p>
