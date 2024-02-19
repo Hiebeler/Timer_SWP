@@ -28,9 +28,8 @@ export class TimerComponent {
     this.fullTime = this.time
     this.interval = setInterval(() => {
       this.time -= 0.1;
-
-      this.progressPercent = Math.floor(100 - (this.time / this.fullTime) * 100);
-
+      this.progressPercent = 100 - this.time / this.fullTime * 100;
+      console.log(100 - this.time / this.fullTime * 100)
       this.setTimes()
       if (this.time <= 0) {
          clearInterval(this.interval)
